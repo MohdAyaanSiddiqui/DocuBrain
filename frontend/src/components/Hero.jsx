@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './ClickUser.css'
 const Hero = () => {
     return (
         <section className="flex flex-col md:flex-row items-center justify-center gap-10 max-md:px-4 mt-30">
@@ -78,7 +78,13 @@ const Hero = () => {
                     </svg>
                 </a>
             </div>
+            <div class="button-bg rounded-full p-0.5 hover:scale-105 transition duration-300 active:scale-100">
+                <button class="px-8 text-sm py-2.5 text-white rounded-full font-medium bg-gray-800">
+                    Click Me
+                </button>
+            </div>
         </section>
+
     )
 }
 
