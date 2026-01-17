@@ -1,11 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const SignUp= () => {
-    const navigate = useNavigate();
-    return (
-        <section className='relative bg-black flex flex-col md:flex-row justify-center px-4 py-20 gap-20 mt-50'>
+const SignUp = () => {
 
+    const navigate = useNavigate();
+
+    return (
+        <section className='min-h-screen w-full bg-gradient-to-br from-black via-[#0b1a12] to-black flex items-center justify-center relative'>
             <div className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none mb-10 size-140 bg-green-500/35 rounded-full blur-[200px]'></div>
 
             <div className='text-center md:text-left mt-12'>
@@ -19,10 +20,10 @@ const SignUp= () => {
                 </div>
                 <h1 className='font-medium text-3xl md:text-5xl/15 bg-linear-to-r from-white to-green-300 bg-clip-text text-transparent max-w-[470px] mt-4'>Ready to experience our DocuBrain?</h1>
                 <p className='text-sm/6 text-white max-w-[345px] mt-4 mx-auto md:mx-0'>SignUp & Turn your PDFs into clear summaries and answer with AI-powered DocuBrain</p>
-        
-                <button onClick={()=>navigate("/login")}>Already have an Account? Login</button>
+                <div className='mt-6 text-center relative z-20'>
+                    <button type='button' onClick={() => navigate("/login")} className='text-sm text-indigo-400 hover:text-indigo-300 underline'>Already have an account? Login</button>
+                </div>
             </div>
-
             <div className='w-full max-w-lg bg-[#00A63E]/0 backdrop-blur-sm border border-white/10 rounded-xl p-8'>
                 <form className='space-y-6'>
                     <div>
