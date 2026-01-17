@@ -1,11 +1,19 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const [input, setInput] = useState({
         email: ""
-    })
+    });
+
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const changeHandler = (e) => {
+        setInput({ ...input, [e.target.name]: e.target.value })
+    };
+    
     const submithandler = async () => {
         e.preventDefault();
         console.log(input);
@@ -18,7 +26,7 @@ const Login = () => {
             });
             if (res.data.success) {
                 dispatch(res.data.user)
-                navigate("/login");
+                navigate("/dashboard");
                 toast.success(res.data.message);
             }
 
@@ -52,6 +60,7 @@ const Login = () => {
                     <div>
                         <label className='block text-white text-sm mb-2'>Email</label>
                         <input
+                            onChange={changeHandler}
                             type="email"
                             value={input.email}
                             required
