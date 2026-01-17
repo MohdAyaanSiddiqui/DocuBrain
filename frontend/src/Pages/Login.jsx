@@ -1,10 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+    const [input, setInput] = useState({
+        email: ""
+    })
     const navigate = useNavigate();
+    const submithandler = async () => {
+        e.preventDefault();
+        console.log(input);
+        try {
+            const res = await axios.post("", input, {
+                headers: {
+                    'Content-Type': "application/json"
+                },
+                withCredentials: true
+            });
+            if (res.data.success) {
+                dispatch(res.data.user)
+                navigate("/login");
+                toast.success(res.data.message);
+            }
+
+        } catch (error) {
+            console.log(error);
+            toast.error(error.response?.data?.message)
+        }
+    }
     return (
-           <section className='min-h-screen w-full bg-gradient-to-br from-black via-[#0b1a12] to-black flex items-center justify-center relative'>
+        <section onClick={submithandler} className='min-h-screen w-full bg-gradient-to-br from-black via-[#0b1a12] to-black flex items-center justify-center relative'>
             <div className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none mb-10 size-140 bg-green-500/35 rounded-full blur-[200px]'></div>
 
             <div className='text-center md:text-left mt-12'>
@@ -24,21 +48,12 @@ const Login = () => {
             </div>
 
             <div className='w-full max-w-lg bg-[#00A63E]/0 backdrop-blur-sm border border-white/10 rounded-xl p-8'>
-                <form className='space-y-6'>
-                    <div>
-                        <label className='block text-white text-sm mb-2'>Name</label>
-                        <input
-                            type="text"
-                            required
-                            placeholder="Eden Johnson"
-                            className='w-full bg-[#00A63E]/5 border border-white/20 rounded-lg px-4 py-3 text-white/40 placeholder:text-white/40 placeholder:text-sm focus:outline-none focus:border-green-600 transition'
-                        />
-                    </div>
-
+                <form onSubmit={submithandler} className='space-y-6'>
                     <div>
                         <label className='block text-white text-sm mb-2'>Email</label>
                         <input
                             type="email"
+                            value={input.email}
                             required
                             placeholder="Eden@example.com"
                             className='w-full bg-[#00A63E]/5 border border-white/20 rounded-lg px-4 py-3 text-white/40 placeholder:text-white/40 placeholder:text-sm focus:outline-none focus:border-green-600 transition'
