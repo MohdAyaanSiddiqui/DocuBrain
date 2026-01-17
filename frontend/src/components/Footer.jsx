@@ -9,9 +9,9 @@ const FooterTwo = () => {
             <div className="absolute bottom-0 z-10 h-60 w-full bg-gradient-to-t pointer-events-none from-black to-transparent"></div>
         </div>
         <div className="px-4 pb-4">
-            <p className="font-medium border-b border-gray-600 pb-5">“Radiant made undercutting all of our competitors an absolute breeze.”</p>
-            <p className="mt-4">— John Doe</p>
-            <p className="text-sm font-medium bg-gradient-to-r from-[#8B5CF6] via-[#E0724A] to-[#9938CA] text-transparent bg-clip-text">Content Marketing</p>
+            <p className="font-medium border-b border-gray-600 pb-5">“Thanks to DocuBrain for making document understanding effortless”</p>
+            <p className="mt-4">— John</p>
+            <p className="text-sm font-medium bg-gradient-to-r from-[#8B5CF6] via-[#E0724A] to-[#9938CA] text-transparent bg-clip-text">Teacher</p>
         </div>
     </div>
     <div className="max-w-80 bg-black text-white rounded-2xl">
@@ -20,9 +20,9 @@ const FooterTwo = () => {
             <div className="absolute bottom-0 z-10 h-60 w-full bg-gradient-to-t pointer-events-none from-black to-transparent"></div>
         </div>
         <div className="px-4 pb-4">
-            <p className="font-medium border-b border-gray-600 pb-5">“Radiant made undercutting all of our competitors an absolute breeze.”</p>
-            <p className="mt-4">— John Doe</p>
-            <p className="text-sm font-medium bg-gradient-to-r from-[#8B5CF6] via-[#E0724A] to-[#9938CA] text-transparent bg-clip-text">Content Marketing</p>
+            <p className="font-medium border-b border-gray-600 pb-5">“Gratefull to DocuBrain for helping us work smarter with documents”</p>
+            <p className="mt-4">— Ryan</p>
+            <p className="text-sm font-medium bg-gradient-to-r from-[#8B5CF6] via-[#E0724A] to-[#9938CA] text-transparent bg-clip-text">Student</p>
         </div>
     </div>
     <div className="max-w-80 bg-black text-white rounded-2xl">
@@ -31,9 +31,9 @@ const FooterTwo = () => {
             <div className="absolute bottom-0 z-10 h-60 w-full bg-gradient-to-t pointer-events-none from-black to-transparent"></div>
         </div>
         <div className="px-4 pb-4">
-            <p className="font-medium border-b border-gray-600 pb-5">“Radiant made undercutting all of our competitors an absolute breeze.”</p>
-            <p className="mt-4">— John Doe</p>
-            <p className="text-sm font-medium bg-gradient-to-r from-[#8B5CF6] via-[#E0724A] to-[#9938CA] text-transparent bg-clip-text">Content Marketing</p>
+            <p className="font-medium border-b border-gray-600 pb-5">“DocuBrain made working with documents so much easier”</p>
+            <p className="mt-4">— Emily</p>
+            <p className="text-sm font-medium bg-gradient-to-r from-[#8B5CF6] via-[#E0724A] to-[#9938CA] text-transparent bg-clip-text">Student</p>
         </div>
     </div>
 </div>
