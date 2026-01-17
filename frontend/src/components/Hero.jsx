@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './ClickUser.css'
 const Hero = () => {
+    const navigate = useNavigate();
     return (
         <section className="flex flex-col md:flex-row items-center justify-center gap-10 max-md:px-4 mt-30">
 
@@ -79,7 +81,7 @@ const Hero = () => {
                 </a>
             </div>
             <div class="button-bg rounded-full p-0.5 hover:scale-105 transition duration-300 active:scale-100">
-                <button class="px-8 text-sm py-2.5 text-white rounded-full font-medium bg-gray-800">
+                <button onClick={()=>navigate("/signup")} class="px-8 text-sm py-2.5 text-white rounded-full font-medium bg-gray-800">
                     Click Me
                 </button>
             </div>
